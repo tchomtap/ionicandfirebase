@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-//for modal return data
-import { ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -13,10 +10,6 @@ export class NavigationModalChildPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public viewController: ViewController) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NavigationModalChildPage');
   }
 
   public popPage() {

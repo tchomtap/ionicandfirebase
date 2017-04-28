@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>data-binding</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <button ion-button [color]="myValue">{{myValue}}</button>
+  <button ion-button [color]="myValue">Secondary</button>
+  <button ion-button (click)="clickFunction()">Primary</button>
+  <ion-input type="text" [(ngModel)]="myValue"></ion-input>
+</ion-content>

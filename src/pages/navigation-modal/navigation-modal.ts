@@ -10,12 +10,7 @@ import { ModalController } from 'ionic-angular';
 export class NavigationModalPage {
   public data: number = 123;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    public modalController: ModalController) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NavigationModalPage');
+  constructor(public modalController: ModalController) {
   }
 
   public modalPage() {

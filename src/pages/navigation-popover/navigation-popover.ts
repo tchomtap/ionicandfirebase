@@ -14,10 +14,6 @@ export class NavigationPopoverPage {
     public popoverController: PopoverController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NavigationPopoverPage');
-  }
-
   public popOverPage(popEvent) {
     let popOver = this.popoverController.create('NavigationPopoverChildPage', {data: this.data});
     popOver.present({ ev: popEvent }).then(() => {
