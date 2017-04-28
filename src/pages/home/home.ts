@@ -13,6 +13,6 @@ export class HomePage {
   }
 
   public navigation() {
-    this.navCtrl.push('Navigation');
+    this.navCtrl.setRoot('Navigation');
   }
 }
