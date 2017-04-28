@@ -11,6 +11,6 @@ import { HomePage } from './home';
   ],
   exports: [
     HomePage
-  ]
+  ] 
 })
 export class HomePageModule {}

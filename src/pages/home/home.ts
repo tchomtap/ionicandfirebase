@@ -12,7 +12,15 @@ export class HomePage {
 
   }
 
-  public navigation() {
-    this.navCtrl.setRoot('Navigation');
+  public navigationPushPop() {
+    this.navCtrl.setRoot('NavigationPushpopPage');
+  }
+
+  public navigationModal() {
+    this.navCtrl.setRoot('NavigationModalPage');
+  }
+
+  public navigationPopover() {
+    this.navCtrl.setRoot('NavigationPopoverPage');
   }
 }
