@@ -9,15 +9,40 @@
 <ion-content padding>
   <h2>Click below list to lesson</h2>
   <ion-list>
-    <ion-item (click)="navigationPushPop()">
-      Navigation Push Pop
-    </ion-item>
-    <ion-item (click)="navigationModal()">
-      Navigation Modal
-    </ion-item>
-    <ion-item (click)="navigationPopover()">
-      Navigation Popover
-    </ion-item>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        Ionic Programming
+      </ion-item-divider>
+      <ion-item (click)="observable()">
+        Observable
+      </ion-item>
+      <ion-item (click)="exportImport()">
+        Export and Import
+      </ion-item>
+      <ion-item (click)="exportImportMixin()">
+        Export and Import with Mixin
+      </ion-item>
+      <ion-item (click)="ngif()">
+        Ngif
+      </ion-item>
+      <ion-item (click)="ngfor()">
+        Ngfor
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        Ionic Navigation
+      </ion-item-divider>
+      <ion-item (click)="navigationPushPop()">
+        Navigation Push Pop
+      </ion-item>
+      <ion-item (click)="navigationModal()">
+        Navigation Modal
+      </ion-item>
+      <ion-item (click)="navigationPopover()">
+        Navigation Popover
+      </ion-item>
+    </ion-item-group>
     <ion-item (click)="dataBinding()">
       Data Binding
     </ion-item>

@@ -12,6 +12,26 @@ export class HomePage {
 
   }
 
+  public observable() {
+    this.navCtrl.push('ObservablePage');
+  }
+
+  public exportImport() {
+    this.navCtrl.push('ExportImportPage');
+  }
+  
+  public exportImportMixin() {
+    this.navCtrl.push('ExportImportMixinPage');
+  }
+
+  public ngif() {
+    this.navCtrl.push('NgifPage');
+  }
+
+  public ngfor() { 
+    this.navCtrl.push('NgforPage');
+  }
+
   public navigationPushPop() {
     this.navCtrl.setRoot('NavigationPushpopPage');
   }
