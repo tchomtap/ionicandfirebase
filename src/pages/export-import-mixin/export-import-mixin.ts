@@ -13,7 +13,7 @@ export class ExportImportMixinPage {
   }
 
   ionViewDidLoad() {
-    console.log("e^{π} = " + exp(pi));
+    console.log("e^{π}*e = " + exp(pi)*e);
   }
 
 }

@@ -12,6 +12,10 @@ export class HomePage {
 
   }
 
+  public structure() {
+    this.navCtrl.push('StructurePage');
+  }
+  
   public observable() {
     this.navCtrl.push('ObservablePage');
   }
@@ -55,4 +59,9 @@ export class HomePage {
   public formBuilderValidation() {
     this.navCtrl.push('FormBuilderValidationPage');
   }
+
+  public gridResponsive() {
+    this.navCtrl.push('GridResponsivePage');
+  }
+
 }

@@ -5,9 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+import { StructureComponentIonicComponentModule } from '../components/structure-component-ionic/structure-component-ionic.module';
+import { StructureProviderIonicProvider } from '../providers/structure-provider-ionic/structure-provider-ionic';
+import { StructurePipeIonicPipeModule } from '../pipes/structure-pipe-ionic/structure-pipe-ionic.module';
+import { StructureDirectiveIonicDirectiveModule } from '../directives/structure-directive-ionic/structure-directive-ionic.module';
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     MyApp
   ],
   imports: [
@@ -17,11 +21,15 @@ import { MyApp } from './app.component';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp
-  ],
+  ], 
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    StructureComponentIonicComponentModule,
+    StructurePipeIonicPipeModule,
+    StructureDirectiveIonicDirectiveModule,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    StructureProviderIonicProvider
   ]
 })
 export class AppModule {}
