@@ -6,11 +6,8 @@ import { StructureProviderIonicProvider } from '../../providers/structure-provid
   templateUrl: 'structure-component-ionic.html'
 })
 export class StructureComponentIonicComponent {
-
   text: string;
-
   constructor(public structureProviderIonicProvider: StructureProviderIonicProvider) {
     this.text = structureProviderIonicProvider.getExternalInterface();
   }
-
 }

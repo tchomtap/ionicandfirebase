@@ -3,11 +3,9 @@ import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-structure',
-  templateUrl: 'structure.html',
+  selector: 'page-google-font',
+  templateUrl: 'google-font.html',
 })
-export class StructurePage {
+export class GoogleFontPage {
 
-  constructor() {  
-  }
 }

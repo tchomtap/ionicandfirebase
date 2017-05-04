@@ -32,8 +32,16 @@ export class HomePage {
     this.navCtrl.push('NgifPage');
   }
 
+  public ngSwitch() { 
+    this.navCtrl.push('NgSwitchPage');
+  }
+
   public ngfor() { 
     this.navCtrl.push('NgforPage');
+  }
+
+  public injection() {
+    this.navCtrl.push('InjectionPage');
   }
 
   public navigationPushPop() {
@@ -64,4 +72,35 @@ export class HomePage {
     this.navCtrl.push('GridResponsivePage');
   }
 
+  public theme() {
+    this.navCtrl.push('ThemePage');
+  }
+  
+  public icon() {
+    this.navCtrl.push('IconPage');
+  }
+
+  public fontAwesome() {
+    this.navCtrl.push('FontAwesomePage');
+  }
+
+  public googleFont() {
+    this.navCtrl.push('GoogleFontPage');
+  }
+
+  public menuInPage() { 
+    this.navCtrl.push('MenuInPage');
+  }
+
+  public loadActionToastAlert() {
+    this.navCtrl.push('LoadActionToastAlertPage');
+  }
+
+  public viewController() {
+    this.navCtrl.push('ViewControllerPage');
+  }
+
+  public component() {
+    this.navCtrl.push('ComponentPage');
+  }
 }

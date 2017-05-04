@@ -13,9 +13,6 @@
       <ion-item-divider color="light">
         Ionic Programming
       </ion-item-divider>
-      <ion-item (click)="structure()">
-        Structure
-      </ion-item>
       <ion-item (click)="observable()">
         Observable
       </ion-item>
@@ -28,8 +25,17 @@
       <ion-item (click)="ngif()">
         Ngif
       </ion-item>
+      <ion-item (click)="ngSwitch()">
+        ngSwitch
+      </ion-item>
       <ion-item (click)="ngfor()">
         Ngfor
+      </ion-item>
+      <ion-item (click)="structure()">
+        Structure
+      </ion-item>
+      <ion-item (click)="injection()">
+        Injection
       </ion-item>
     </ion-item-group>
     <ion-item-group>
@@ -50,19 +56,54 @@
       <ion-item-divider color="light">
         User input and layout
       </ion-item-divider>
-    <ion-item (click)="dataBinding()">
-      Data Binding
-    </ion-item>
-    <ion-item (click)="formBuilder()">
-      Form Building
-    </ion-item>
-    <ion-item (click)="formBuilderValidation()">
-      Form Building with validation
-    </ion-item>
-    <ion-item (click)="gridResponsive()">
-      Grid responsive
-    </ion-item>
+      <ion-item (click)="dataBinding()">
+        Data Binding
+      </ion-item>
+      <ion-item (click)="formBuilder()">
+        Form Building
+      </ion-item>
+      <ion-item (click)="formBuilderValidation()">
+        Form Building with validation
+      </ion-item>
+      <ion-item (click)="gridResponsive()">
+        Grid responsive
+      </ion-item>
     </ion-item-group>
-    
+    <ion-item-group>
+      <ion-item-divider color="light">
+        Theme
+      </ion-item-divider>
+      <ion-item (click)="theme()">
+        Theme
+      </ion-item>
+      <ion-item (click)="icon()">
+        Ionic Icon
+      </ion-item>
+      <ion-item (click)="fontAwesome()">
+        Font Awesome icon
+      </ion-item>
+      <ion-item (click)="googleFont()">
+        Google Font
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        Component
+      </ion-item-divider>
+      <ion-item (click)="menuInPage()">
+        Menu in page
+      </ion-item>
+      <ion-item (click)="loadActionToastAlert()">
+        Loading ActionSheet Toast Alert
+      </ion-item>
+      <ion-item (click)="viewController()">
+        View Controller
+      </ion-item>
+      <ion-item (click)="component()">
+        User defined component
+      </ion-item>
+      
+    </ion-item-group>
+
   </ion-list>
 </ion-content>
