@@ -20,7 +20,8 @@ export class FormBuilderValidationPage {
     });
   }
 
-  saveProfile() {
-    this.output = this.profileForm.value.name + " " + this.profileForm.value.email;
+  saveProfile(form) {
+    this.output = form.value.name + " " + form.value.email;
+    //this.output = this.profileForm.value.name + " " + this.profileForm.value.email;
   }
 }

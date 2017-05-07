@@ -1,13 +1,14 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>form-builder-validation</ion-title>
+    <ion-title>data-submit-to-server</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+
 <ion-content padding>
-  <form #form="ngForm" [formGroup]="profileForm" (submit)="saveProfile(form)">
+  <form [formGroup]="profileForm" (submit)="saveProfile()">
     <ion-item>
       <ion-label stacked>Name</ion-label>
       <ion-input formControlName="name" type="text" placeholder="Your name" [class.invalid]="!profileForm.controls.name.valid && profileForm.controls.name.dirty">
@@ -17,10 +18,10 @@
       <p>ชื่อไม่ถูกต้อง</p>
     </ion-item>
     <ion-item>
-      <ion-label stacked>Email</ion-label>
-      <ion-input formControlName="email" type="email" placeholder="Email" [class.invalid]="!profileForm.controls.email.valid && profileForm.controls.email.dirty"></ion-input>
+      <ion-label stacked>Address</ion-label>
+      <ion-input formControlName="address" type="text" placeholder="Address" [class.invalid]="!profileForm.controls.address.valid && profileForm.controls.address.dirty"></ion-input>
     </ion-item>
-    <ion-item class="error-message" *ngIf="!profileForm.controls.email.valid && profileForm.controls.email.dirty" >
+    <ion-item class="error-message" *ngIf="!profileForm.controls.address.valid && profileForm.controls.address.dirty" >
       <p>อีเมล์ไม่ถูกต้อง</p>
     </ion-item> 
     <ion-item>
@@ -28,6 +29,12 @@
     </ion-item>
   </form>
   <div>
-    Output is {{ output }}
+    Output is : 
+  </div>
+  <div>
+    {{ 'name: ' + profile.name }}
+  </div>
+  <div>
+    {{ 'address: ' + profile.address }}
   </div>
 </ion-content>

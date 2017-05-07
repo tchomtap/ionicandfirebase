@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { UseProvider } from '../providers/use/use';
@@ -12,6 +13,7 @@ import { StructurePipeIonicPipeModule } from '../pipes/structure-pipe-ionic/stru
 import { StructureDirectiveIonicDirectiveModule } from '../directives/structure-directive-ionic/structure-directive-ionic.module';
 import { UserDefinedComponentModule } from '../components/user-defined/user-defined.module';
 import { UserDefinedInputOutputComponentModule } from '../components/user-defined-input-output/user-defined-input-output.module';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [ 
@@ -19,7 +21,12 @@ import { UserDefinedInputOutputComponentModule } from '../components/user-define
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: 'ionic3andfirebase',
+         driverOrder: ['localstorage', 'sqlite', 'indexeddb']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="profileForm" (submit)="saveProfile()">
+  <form #form="ngForm" [formGroup]="profileForm" (submit)="saveProfile(form)">
     <ion-item>
       <ion-label stacked>Name</ion-label>
       <ion-input formControlName="name" type="text" placeholder="Your name"></ion-input>

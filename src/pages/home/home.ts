@@ -103,4 +103,20 @@ export class HomePage {
   public component() {
     this.navCtrl.push('ComponentPage');
   }
+
+  public storage() {
+    this.navCtrl.push('StoragePage');
+  }
+
+  public dataManipulation() {
+    this.navCtrl.push('DataManipulationPage');
+  }
+
+  public http() {
+    this.navCtrl.push('HttpPage');
+  }
+  
+  public dataSubmitToServer() {
+    this.navCtrl.push('DataSubmitToServerPage');
+  }
 }
