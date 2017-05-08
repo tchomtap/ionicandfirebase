@@ -3,6 +3,7 @@ import { IonicPage } from 'ionic-angular';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { Country } from '../../libs/model/country';
 
 @IonicPage()
 @Component({
@@ -10,10 +11,11 @@ import 'rxjs/add/operator/catch';
   templateUrl: 'http.html',
 })
 export class HttpPage {
-  public items: any;
+  items: any;
+  country: Country = new Country();
 
   constructor(public http: Http) {
-    this.http.get('http://localhost:8100/assets/data/datafile.json')
+    this.http.get('http://localhost:8100/assets/data/country.json')
       .map(res => res.json())
       .subscribe(data => {
         this.items = data.items;
@@ -21,7 +23,7 @@ export class HttpPage {
   }
 
   advanceWithCatch() {
-    this.http.get('http://localhost:8100/assets/data/datafile.json').catch((error, observable) => {
+    this.http.get('http://localhost:8100/assets/data/country.json').catch((error, observable) => {
       console.log(error);
       return observable;
     }).map(res => res.json()).catch((error, observable) => {
@@ -30,6 +32,10 @@ export class HttpPage {
     }).subscribe(data => {
       this.items = data.items;
     });
+  }
+
+  selectCountry(country: Country) {
+    this.country = country;
   }
 
 }

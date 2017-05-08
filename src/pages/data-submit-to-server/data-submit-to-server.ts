@@ -4,7 +4,6 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Validator } from '../../libs/util';
 import { Http, Headers, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 import { Profile } from '../../libs/model/profile';
 
 @IonicPage()
@@ -16,13 +15,11 @@ export class DataSubmitToServerPage {
   profileForm: FormGroup;
   profile: Profile = new Profile();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    public formBuilder: FormBuilder,
+  constructor(public formBuilder: FormBuilder,
     public http: Http) {
-
     this.profileForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      address: ['', Validators.required]
+      name: [''],
+      address: ['']
     });
     this.refreshFormData();
   }
@@ -40,7 +37,7 @@ export class DataSubmitToServerPage {
       body.set('name', this.profileForm.get('name').value);
       body.set('address', this.profileForm.get('address').value);
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
-      this.http.post('http://localhost:8080/ReceiveData', body, headers)
+      this.http.post('https://surachai-dot-fixcara-com.appspot.com/ReceiveData', body, headers)
         .map(response => {
           var res = response.json();
           var result = <Profile>response.json();
@@ -53,8 +50,8 @@ export class DataSubmitToServerPage {
   }
 
   refreshFormData() {
-      this.profileForm.controls["name"].setValue(this.profile.name);
-      this.profileForm.controls["address"].setValue(this.profile.address);
+      this.profileForm.controls["name"].setValue(this.profile['name']);
+      this.profileForm.controls["address"].setValue(this.profile['address']);
   }
 
 }

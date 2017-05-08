@@ -8,7 +8,11 @@
 
 
 <ion-content padding>
-  <div *ngFor="let item of items">
+  <div>
+    Country you select: {{ country.data }}
+  </div>
+  <hr>
+  <div *ngFor="let item of items" (click)="selectCountry(item)">
     {{ item.id }}, {{ item.continent }}, {{ item.data }}
   </div>
 </ion-content>

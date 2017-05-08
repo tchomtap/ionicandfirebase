@@ -119,4 +119,8 @@ export class HomePage {
   public dataSubmitToServer() {
     this.navCtrl.push('DataSubmitToServerPage');
   }
+
+  public dataSubmitWithProvider() {
+    this.navCtrl.push('DataSubmitWithProviderPage');
+  }
 }

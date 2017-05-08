@@ -14,6 +14,7 @@ import { StructureDirectiveIonicDirectiveModule } from '../directives/structure-
 import { UserDefinedComponentModule } from '../components/user-defined/user-defined.module';
 import { UserDefinedInputOutputComponentModule } from '../components/user-defined-input-output/user-defined-input-output.module';
 import { IonicStorageModule } from '@ionic/storage';
+import { DataServerProvider } from '../providers/data-server/data-server';
 
 @NgModule({
   declarations: [ 
@@ -47,7 +48,8 @@ import { IonicStorageModule } from '@ionic/storage';
     StructureProviderIonicProvider,
     UseProvider,
 
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataServerProvider
   ]
 })
 export class AppModule {}
