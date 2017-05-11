@@ -13,6 +13,10 @@
       <ion-item-divider color="light">
         Ionic Programming
       </ion-item-divider>
+      
+      <ion-item (click)="promise()">
+        Promise
+      </ion-item>
       <ion-item (click)="observable()">
         Observable
       </ion-item>
@@ -122,8 +126,21 @@
       <ion-item (click)="dataSubmitWithProvider()">
         Data submit to server with provider
       </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        Others
+      </ion-item-divider>
+      <ion-item (click)="translation()">
+        External module: Language translation
+      </ion-item>
+      <ion-item (click)="sharedModule()">
+        Shared module
+      </ion-item>
+      <ion-item (click)="extends()">
+        Extends class
+      </ion-item>
       
     </ion-item-group>
-
   </ion-list>
 </ion-content>

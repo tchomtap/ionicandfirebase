@@ -17,7 +17,6 @@ export class DataServerProvider {
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
       this.http.post('https://surachai-dot-fixcara-com.appspot.com/ReceiveData', body, headers)
         .map(response => {
-          var res = response.json();
           var result = <Profile>response.json();
           return result;
         })

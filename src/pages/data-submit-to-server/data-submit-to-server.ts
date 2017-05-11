@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { Validator } from '../../libs/util';
+import { IonicPage } from 'ionic-angular';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Http, Headers, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Profile } from '../../libs/model/profile';
@@ -39,7 +38,6 @@ export class DataSubmitToServerPage {
       let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
       this.http.post('https://surachai-dot-fixcara-com.appspot.com/ReceiveData', body, headers)
         .map(response => {
-          var res = response.json();
           var result = <Profile>response.json();
           return result;
         })

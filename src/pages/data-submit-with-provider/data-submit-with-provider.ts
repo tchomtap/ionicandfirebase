@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { Validator } from '../../libs/util';
+import { IonicPage, LoadingController } from 'ionic-angular';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import 'rxjs/add/operator/map';
 import { Profile } from '../../libs/model/profile';
 import { DataServerProvider } from '../../providers/data-server/data-server'

@@ -15,6 +15,10 @@ export class HomePage {
   public structure() {
     this.navCtrl.push('StructurePage');
   }
+
+  public promise() {
+    this.navCtrl.push('PromisePage');
+  }
   
   public observable() {
     this.navCtrl.push('ObservablePage');
@@ -122,5 +126,17 @@ export class HomePage {
 
   public dataSubmitWithProvider() {
     this.navCtrl.push('DataSubmitWithProviderPage');
+  }
+
+  public translation() {
+    this.navCtrl.push('TranslationPage');
+  }
+
+  public sharedModule() {
+    this.navCtrl.push('UseSharedModulePage');
+  }
+
+  public extends() {
+    this.navCtrl.push('UseExtendsPage');
   }
 }

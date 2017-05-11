@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { UseProvider } from '../providers/use/use';
@@ -16,6 +16,13 @@ import { UserDefinedInputOutputComponentModule } from '../components/user-define
 import { IonicStorageModule } from '@ionic/storage';
 import { DataServerProvider } from '../providers/data-server/data-server';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function createTranslateLoader(http: Http) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
   declarations: [ 
     MyApp
@@ -27,6 +34,13 @@ import { DataServerProvider } from '../providers/data-server/data-server';
     IonicStorageModule.forRoot({
       name: 'ionic3andfirebase',
          driverOrder: ['localstorage', 'sqlite', 'indexeddb']
+    }),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [Http]
+      }
     })
   ],
   bootstrap: [IonicApp],
