@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { StructurePage } from './structure';
-import { StructureComponentIonicComponent } from '../../components/structure-component-ionic/structure-component-ionic';
-import { StructurePipeIonicPipe } from '../../pipes/structure-pipe-ionic/structure-pipe-ionic';
-import { StructureDirectiveIonicDirective } from '../../directives/structure-directive-ionic/structure-directive-ionic';
+import { StructureComponentIonicComponentModule } from '../../components/structure-component-ionic/structure-component-ionic.module';
+import { StructurePipeIonicPipeModule } from '../../pipes/structure-pipe-ionic/structure-pipe-ionic.module';
+import { StructureDirectiveIonicDirectiveModule } from '../../directives/structure-directive-ionic/structure-directive-ionic.module';
 
 @NgModule({
   declarations: [
     StructurePage,
-    StructureComponentIonicComponent,
-    StructurePipeIonicPipe,
-    StructureDirectiveIonicDirective
   ],
   imports: [
+    StructureComponentIonicComponentModule,
+    StructurePipeIonicPipeModule,
+    StructureDirectiveIonicDirectiveModule,
     IonicPageModule.forChild(StructurePage),
   ],
   exports: [

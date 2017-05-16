@@ -4,8 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
-
 import { Base } from '../libs/base';
+import firebase from "firebase";
 
 @Component({
   templateUrl: 'app.html'
@@ -31,7 +31,6 @@ export class MyApp {
 
     console.log('load in app.component.ts');
 
-    
     this.storage.ready().then(() => {
       //prepared for use in class extends
       Base._storage = this.storage;
@@ -47,6 +46,15 @@ export class MyApp {
       });
     });
 
+    firebase.initializeApp({
+      apiKey: "AIzaSyCJxaQJ0uCKXLlFGkcOhbyY9quo2NMjFBQ",
+      authDomain: "ionic3firebase.firebaseapp.com",
+      databaseURL: "https://ionic3firebase.firebaseio.com",
+      projectId: "ionic3firebase",
+      storageBucket: "ionic3firebase.appspot.com",
+      messagingSenderId: "680123526449"
+    });
+    
   }
 }
 

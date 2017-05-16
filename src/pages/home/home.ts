@@ -139,4 +139,12 @@ export class HomePage {
   public extends() {
     this.navCtrl.push('UseExtendsPage');
   }
+
+  public firebaseCloudFunction() {
+    this.navCtrl.push('FirebaseCloudFunctionPage');
+  }
+
+  public firebaseCloudMessage() {
+    this.navCtrl.push('FirebaseCloudMessagePage');
+  }
 }
