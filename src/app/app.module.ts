@@ -19,12 +19,15 @@ import { DataServerProvider } from '../providers/data-server/data-server';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { Camera } from "@ionic-native/camera";
+import { BarcodeScanner } from "@ionic-native/barcode-scanner";
+
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [ 
+  declarations: [
     MyApp
   ],
   imports: [
@@ -46,11 +49,11 @@ export function createTranslateLoader(http: Http) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp
-  ], 
+  ],
   providers: [
     StatusBar,
     SplashScreen,
-    
+
     StructureComponentIonicComponentModule,
     UserDefinedComponentModule,
     UserDefinedInputOutputComponentModule,
@@ -63,7 +66,10 @@ export function createTranslateLoader(http: Http) {
     UseProvider,
 
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataServerProvider
+    DataServerProvider,
+
+    Camera,
+    BarcodeScanner
   ]
 })
 export class AppModule {}

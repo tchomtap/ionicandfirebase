@@ -19,7 +19,7 @@ export class HomePage {
   public promise() {
     this.navCtrl.push('PromisePage');
   }
-  
+
   public observable() {
     this.navCtrl.push('ObservablePage');
   }
@@ -27,7 +27,7 @@ export class HomePage {
   public exportImport() {
     this.navCtrl.push('ExportImportPage');
   }
-  
+
   public exportImportMixin() {
     this.navCtrl.push('ExportImportMixinPage');
   }
@@ -36,11 +36,11 @@ export class HomePage {
     this.navCtrl.push('NgifPage');
   }
 
-  public ngSwitch() { 
+  public ngSwitch() {
     this.navCtrl.push('NgSwitchPage');
   }
 
-  public ngfor() { 
+  public ngfor() {
     this.navCtrl.push('NgforPage');
   }
 
@@ -79,7 +79,7 @@ export class HomePage {
   public theme() {
     this.navCtrl.push('ThemePage');
   }
-  
+
   public icon() {
     this.navCtrl.push('IconPage');
   }
@@ -92,7 +92,7 @@ export class HomePage {
     this.navCtrl.push('GoogleFontPage');
   }
 
-  public menuInPage() { 
+  public menuInPage() {
     this.navCtrl.push('MenuInPage');
   }
 
@@ -119,7 +119,7 @@ export class HomePage {
   public http() {
     this.navCtrl.push('HttpPage');
   }
-  
+
   public dataSubmitToServer() {
     this.navCtrl.push('DataSubmitToServerPage');
   }
@@ -146,5 +146,13 @@ export class HomePage {
 
   public firebaseCloudMessage() {
     this.navCtrl.push('FirebaseCloudMessagePage');
+  }
+
+  public barcodeScanner() {
+    this.navCtrl.push('BarcodeScannerPage');
+  }
+
+  public camera() {
+    this.navCtrl.push('CameraExamplePage');
   }
 }
