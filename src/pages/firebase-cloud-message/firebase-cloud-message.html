@@ -9,4 +9,7 @@
 
 <ion-content padding>
   Message: {{ message}}
-</ion-content> 
+  <ion-input type = "text" [(ngModel)] = "name"></ion-input>
+  <button ion-button (click)="callPingPong()">Call cloud function</button> 
+  Status of call pingpong function is: {{ output }}
+</ion-content>

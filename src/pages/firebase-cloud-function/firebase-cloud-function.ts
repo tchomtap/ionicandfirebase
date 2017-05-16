@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 
 @IonicPage()
 @Component({
