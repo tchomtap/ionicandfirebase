@@ -19,6 +19,7 @@ import { DataServerProvider } from '../providers/data-server/data-server';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { Camera } from "@ionic-native/camera";
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 
 export function createTranslateLoader(http: Http) {
@@ -67,6 +68,7 @@ export function createTranslateLoader(http: Http) {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataServerProvider,
 
+    Camera,
     BarcodeScanner
   ]
 })

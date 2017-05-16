@@ -156,12 +156,14 @@
 
         <ion-item-group>
             <ion-item-divider color="light">
-                Native Plugin
+                Native Plugin (On device only)
             </ion-item-divider>
+            <ion-item (click)="camera()">
+                Camera
+            </ion-item>
             <ion-item (click)="barcodeScanner()">
                 Barcode Scanner
             </ion-item>
-
         </ion-item-group>
     </ion-list>
 </ion-content>

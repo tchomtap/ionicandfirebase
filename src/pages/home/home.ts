@@ -151,4 +151,8 @@ export class HomePage {
   public barcodeScanner() {
     this.navCtrl.push('BarcodeScannerPage');
   }
+
+  public camera() {
+    this.navCtrl.push('CameraExamplePage');
+  }
 }
