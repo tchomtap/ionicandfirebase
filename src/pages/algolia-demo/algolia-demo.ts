@@ -22,7 +22,7 @@ export class AlgoliaDemoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     console.log('init algolia');
-    this.aglIndex = this.aglClient.initIndex('getstarted_actors');
+    this.aglIndex = this.aglClient.initIndex('contacts');
   }
 
   ionViewDidLoad() {
@@ -32,6 +32,7 @@ export class AlgoliaDemoPage {
   searchContact() {
     console.log("try search: ", this.keyword);
     this.aglIndex.search(this.keyword, (err, content) => {
+      console.log("result: ", JSON.stringify(content));
       console.log("error: ", err);
       if (err == null) {
         if (content.nbPages == 0) {
