@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { Base } from '../libs/base';
 import firebase from "firebase";
+import { Http } from '@angular/http';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,8 +14,9 @@ import firebase from "firebase";
 export class MyApp {
   rootPage: any = 'HomePage';
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
-    public translateService: TranslateService, public storage: Storage) {
+  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
+    public translateService: TranslateService, public storage: Storage,
+    public http: Http) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -26,6 +28,9 @@ export class MyApp {
   }
 
   initApp() {
+    Base._http = this.http;
+    Base._platform = this.platform;
+    
     //set application language
     this.translateService.setDefaultLang('en-US');
 

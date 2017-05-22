@@ -148,6 +148,10 @@ export class HomePage {
     this.navCtrl.push('FirebaseCloudMessagePage');
   }
 
+  public firebaseCrashReport() {
+    this.navCtrl.push('FirebaseCrashReportPage');
+  }
+
   public barcodeScanner() {
     this.navCtrl.push('BarcodeScannerPage');
   }

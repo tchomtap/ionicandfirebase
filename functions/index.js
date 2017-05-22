@@ -30,9 +30,10 @@ exports.welcomeNewToken = functions.database.ref('/messages/{pushId}/ionic3fireb
       notification: {
         'title': 'Hello' + data,
         'body': welcomeMessage,
-        'click_action' : "http://localhost:8100/#/firebase-cloud-message"
+        //'click_action' : "http://localhost:8100/#/firebase-cloud-message"
       },
       data: {
+        'content-available': '1',
         'name': data,
         'welcome': welcomeMessage
       }
@@ -45,11 +46,13 @@ exports.welcomeNewToken = functions.database.ref('/messages/{pushId}/ionic3fireb
     if (token) {
       let status = '';
       admin.messaging().sendToDevice(token, payload, options).then(response => {
-        status = "Successfully sent message"
+        status = "Successfully sent message";
+        event.data.ref.parent.child('sendStatus').set(status);
       }).catch(error => {
         status = "Error sending message:" + error;
+        event.data.ref.parent.child('sendStatus').set(status);
       });
-      event.data.ref.parent.child('sendStatus').set(status);
+
     }
 
     /*      return new Promise( () => {
@@ -58,3 +61,30 @@ exports.welcomeNewToken = functions.database.ref('/messages/{pushId}/ionic3fireb
 
     return event.data.ref.parent.child('sendWelcome').set('YES: ' + data);
   });
+
+exports.log = functions.https.onRequest((req, res) => {
+
+  res.set({
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Allow-Methods': 'POST',
+    'Content-Type': 'application/json'
+  });
+
+  let source = req.query.source?req.query.source:'NOSOURCE';
+  let level = req.query.level?req.query.level:'INFO';
+  let message = req.query.message;
+  if (message) {
+    switch (level) {
+      case 'INFO':
+        console.log(message);
+        break;
+      case 'DEBUG':
+        console.debug(message);
+        break;
+      case 'ERROR':
+        console.error(message);
+        break;
+    }
+  }
+});
