@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- inherit from the holo theme -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <drawable name="notification_big">@mipmap/icon</drawable>
+    <drawable name="notification_icon">@mipmap/icon</drawable>
+</resources>

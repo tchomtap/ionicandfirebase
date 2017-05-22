@@ -30,6 +30,8 @@ exports.welcomeNewToken = functions.database.ref('/messages/{pushId}/ionic3fireb
       notification: {
         'title': 'Hello' + data,
         'body': welcomeMessage,
+        'icon': 'notification_icon',
+        'color': '#FE0000'
         //'click_action' : "http://localhost:8100/#/firebase-cloud-message"
       },
       data: {
@@ -62,7 +64,7 @@ exports.welcomeNewToken = functions.database.ref('/messages/{pushId}/ionic3fireb
     return event.data.ref.parent.child('sendWelcome').set('YES: ' + data);
   });
 
-exports.log = functions.https.onRequest((req, res) => {
+/*exports.log = functions.https.onRequest((req, res) => {
 
   res.set({
     'Access-Control-Allow-Origin': '*',
@@ -71,8 +73,8 @@ exports.log = functions.https.onRequest((req, res) => {
     'Content-Type': 'application/json'
   });
 
-  let source = req.query.source?req.query.source:'NOSOURCE';
-  let level = req.query.level?req.query.level:'INFO';
+  let source = req.query.source ? req.query.source : 'NOSOURCE';
+  let level = req.query.level ? req.query.level : 'INFO';
   let message = req.query.message;
   if (message) {
     switch (level) {
@@ -87,4 +89,4 @@ exports.log = functions.https.onRequest((req, res) => {
         break;
     }
   }
-});
+});*/
