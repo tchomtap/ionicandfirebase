@@ -159,4 +159,8 @@ export class HomePage {
   public camera() {
     this.navCtrl.push('CameraExamplePage');
   }
+
+  public algoliaSearch() {
+    this.navCtrl.push('AlgoliaDemoPage');
+  }
 }
