@@ -12,10 +12,6 @@ export class HomePage {
 
   }
 
-  public structure() {
-    this.navCtrl.push('StructurePage');
-  }
-
   public promise() {
     this.navCtrl.push('PromisePage');
   }
@@ -44,6 +40,10 @@ export class HomePage {
     this.navCtrl.push('NgforPage');
   }
 
+  public structure() {
+    this.navCtrl.push('StructurePage');
+  }
+
   public injection() {
     this.navCtrl.push('InjectionPage');
   }
@@ -58,6 +58,10 @@ export class HomePage {
 
   public navigationPopover() {
     this.navCtrl.setRoot('NavigationPopoverPage');
+  }
+
+  public tabs() {
+    this.navCtrl.setRoot('TabsPage');
   }
 
   public dataBinding() {
@@ -138,6 +142,12 @@ export class HomePage {
 
   public extends() {
     this.navCtrl.push('UseExtendsPage');
+  }
+
+  public deeplinks() {
+    this.navCtrl.push('deeplinks-demo', {
+      id: '1234'
+    });
   }
 
   public firebaseCloudFunction() {
