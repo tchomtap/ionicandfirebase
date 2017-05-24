@@ -16,9 +16,7 @@ import { UserDefinedInputOutputComponentModule } from '../components/user-define
 import { IonicStorageModule } from '@ionic/storage';
 import { DataServerProvider } from '../providers/data-server/data-server';
 
-import { NgifPage } from '../pages/ngif/ngif';
-import { NgSwitchPage } from '../pages/ng-switch/ng-switch';
-import { NgforPage } from '../pages/ngfor/ngfor';
+import { SharedModule } from '../libs/shared.module';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -34,9 +32,6 @@ export function createTranslateLoader(http: Http) {
 @NgModule({
   declarations: [
     MyApp,
-    NgifPage,
-    NgSwitchPage,
-    NgforPage
   ],
   imports: [
     BrowserModule,
@@ -52,14 +47,12 @@ export function createTranslateLoader(http: Http) {
         useFactory: (createTranslateLoader),
         deps: [Http]
       }
-    })
+    }),
+    SharedModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    NgifPage,
-    NgSwitchPage,
-    NgforPage
   ],
   providers: [
     StatusBar,
