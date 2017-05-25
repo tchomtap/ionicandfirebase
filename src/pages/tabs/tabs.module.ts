@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { TabsPage } from './tabs';
-import { SharedModule } from '../../libs/shared.module';
+//import { SharedModule } from '../../libs/shared.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +9,7 @@ import { SharedModule } from '../../libs/shared.module';
   ],
   imports: [
     IonicPageModule.forChild(TabsPage),
-    SharedModule
+    //SharedModule
   ],
   exports: [
   ]
